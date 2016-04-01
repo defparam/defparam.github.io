@@ -102,13 +102,13 @@ html {
 .sidebar-about {
   color: #FFFFFF;
   margin-top: 9px;
-  font-family: "Quantico", serif;
   font-size: 1.3rem;
   vertical-align: 65px;
   padding-bottom: 0;
   display: inline-block;
   padding-left: 0px;
   padding-right: 28px;
+  font-family: "Quantico", serif;
 }
 /* Sidebar nav */
 .sidebar-nav {
