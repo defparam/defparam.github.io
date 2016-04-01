@@ -1,0 +1,93 @@
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+    <div class="sidebar-logo"> <img src="/public/logo_4.png"></div>
+    <div class="sidebar-about">
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>	
+      <!-- <p class="lead">{{ site.description }}</p> -->
+    </div>
+	<hr>
+    <nav class="sidebar-nav">
+	  <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+	  {% assign pages_list = site.pages | sort:"priority"  %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+			{% if node.parent == null %}
+			  {% if node.layout == "page" %}
+				    {% assign has_children = false  %}
+					{% assign active_parent = false  %}
+					{% for subnode in pages_list %}
+						{% if subnode.title != null %}
+							{% if subnode.parent == node.title %}
+								{% if subnode.layout == "page" %}
+									{% assign has_children = true  %}
+									
+								{% endif %}
+								{% if page.url == subnode.url %}
+									{% assign active_parent = true  %}
+								{% endif %}
+								
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+					
+					{% if has_children == true %}
+					<div class="dropdown">
+					
+					<div class="dropdown-parent"><a href="{% if node.nolink == true %}{{ node.url }}{% else %}#{% endif %}" class="sidebar-nav-item{% if page.url == node.url or active_parent == true %} active{% endif %}">{{ node.title }}</a></div>
+					<div class="dropdown-content">
+					{% assign is_first = true %}
+						{% for subnode in pages_list %}
+							{% if subnode.title != null %}
+								{% if subnode.parent == node.title %}
+									{% if subnode.layout == "page" %}
+										{% if is_first == true %}<div class="leftarrowdiv">{% endif %}
+										<a class="sidebar-nav-item{% if page.url == subnode.url %} active{% endif %}" href="{{ subnode.url }}">{{ subnode.title }}</a>
+										{% if is_first == true %}</div>{% assign is_first = false %}{% endif %}
+									{% endif %}
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+					</div>
+					{% else %}
+					
+					<a href="{% if node.nolink == true %}#{% else %}{{ node.url }}{% endif %}" class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+					{% endif %}
+			  {% endif %}
+			{% endif %}
+        {% endif %}
+      {% endfor %}
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub Projects</a>
+    </nav>
+    
+	<div class="sidebar-bottom">
+		<div class="sidebar-social">
+			<div class="img-twitter">
+			{% if site.twitter_username %}
+				<a href="https://twitter.com/{{ site.twitter_username }}">
+				  <img src="/public/twitter_2.png">
+				</a>
+			{% endif %}
+			</div>
+			<div class="img-github">
+			{% if site.github_username %}
+				<a href="https://github.com/{{ site.github_username }}">
+				  <img src="/public/github.png">
+				</a>
+			{% endif %}
+			</div>
+		</div>
+		
+		<div class="sidebar-copyright">
+		<p>&copy; Evan Custodio {{ site.time | date: '%Y' }} All rights reserved</p></div>
+		</div>
+	</div>
+</div>

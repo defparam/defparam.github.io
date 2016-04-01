@@ -1,0 +1,22 @@
+
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+gems: ["jekyll-paginate","jekyll-gist"]
+
+# Setup
+title:            RECONFIG|IO
+url:              http://code.reconfig.io
+baseurl:          /
+
+author:
+  name:           'Evan Custodio'
+  url:            https://twitter.com/defparam
+
+paginate:         5
+
+github:
+  repo:           https://github.com/defparam/
