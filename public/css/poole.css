@@ -249,11 +249,11 @@ tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
  * Center the page content.
  */
 .container {
-  max-width: 16rem;
   padding-left: 0rem;
   padding-right: 0rem;
   margin-left: 0;
   margin-right: 0;
+  height: 100%;
 }
 /*
  * Masthead

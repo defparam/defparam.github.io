@@ -2,7 +2,7 @@
 layout: page
 title: SNES
 priority: 3
-nolink: true
+nolink: false
 ---
 
 SNES Related Projects
