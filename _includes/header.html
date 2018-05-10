@@ -26,6 +26,28 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+
+
+<!-- Twitter cards -->
+<meta name="twitter:site"    content="@{{ site.social.twitter }}">
+<meta name="twitter:creator" content="{{ site.author }}">
+<meta name="twitter:title"   content="{{ page.title }}">
+
+{% if page.summary %}
+<meta name="twitter:description" content="{{ page.summary }}">
+{% else %}
+<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+{% if page.summary_image %}
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="{{ page.summary_image }}">
+{% else %}
+<meta name="twitter:card"  content="summary">
+<meta name="twitter:image" content="{{ site.summary_image }}">
+{% endif %}
+<!-- end of Twitter cards -->
+
 </head>
 
 <body>
@@ -59,7 +81,7 @@
           <span class="icon-bar"></span>
         </button>
 		
-        <a class="navbar-brand" style="font-family: 'Raleway', sans-serif;" href="{{ '' | relative_url }}/"><i class="fas fa-cogs"></i> {{ site.name }}</a>
+        <a class="navbar-brand" style="font-family: 'Raleway', sans-serif;" href="{{ '' | relative_url }}/"><i class="fas fa-cogs"></i> | {{ site.name }}</a>
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav" style="font-family: 'Raleway', sans-serif;">
