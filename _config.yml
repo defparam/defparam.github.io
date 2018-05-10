@@ -47,3 +47,6 @@ permalink: /:year/:month/:title
 # disable on a post-by-post basis
 disqus: streetturtle
 comments: false
+
+plugins:
+  - jekyll-feed
