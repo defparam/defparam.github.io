@@ -3,6 +3,7 @@ layout: post
 title: "Hello World for FPGA"
 date: 2018-05-09
 description: Hello world! Here is an LED in verilog. This activity is mostly a test post. But I hope you enjoy the writeup nonetheless.
+github_comments_issueid: 1
 tags: 
  - FPGA
 ---

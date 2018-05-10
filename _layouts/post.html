@@ -31,11 +31,13 @@ h6   {color: #8FD6B3;}
                     {{ content }}
                     {% include share.html %}
                   </div>
-                  {% if page.comments %}
-                  <div id="disqus_thread">
-                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                  </div>
+                  {% if page.github_comments_issueid %}
+				  <hr>
+					   <div class="page-content">
+					  <div class="wrapper">
+						{% include github-comments.html %}
+					  </div>
+					</div>
                   {% endif %}
                 </div>
               </div>
@@ -45,7 +47,6 @@ h6   {color: #8FD6B3;}
             </div>
           </div>
         </div>
-        {% include disqus-comments.html %}
       </div>
       {% include footer.html %}
     </div>

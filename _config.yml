@@ -30,6 +30,8 @@ kramdown:
   
 highlighter: rouge
 
+github_comments_repository: defparam/defparam.github.io
+
 exclude: ['README.md', 'LICENSE']
 
 # Google Analytics key, leave blank to ignore

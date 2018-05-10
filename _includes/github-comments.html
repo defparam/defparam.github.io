@@ -1,0 +1,27 @@
+{% if page.github_comments_issueid and site.github_comments_repository %}
+    
+<div id="gh-comments"> 
+	<form id="AddComment" action="https://github.com/{{site.github_comments_repository}}/issues/{{page.github_comments_issueid}}#new_comment_field" rel="nofollow"> 
+	<a href="javascript:{}" onclick="document.getElementById('AddComment').submit(); return false;"><h6>ADD COMMENT</h6></a> </form>	
+    <div id="gh-comments-list"></div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="{{ site.baseurl }}/js/github-comments.js"> </script>
+
+<script type="text/javascript"> 
+    DoGithubComments ( 
+        "{{ site.github_comments_repository }}" , 
+        "{{ page.github_comments_issueid }}" 
+    ); 
+</script>
+
+<noscript>Please enable JavaScript to view comments.</noscript>
+
+{% endif %}
+
+
