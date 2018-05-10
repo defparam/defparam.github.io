@@ -11,7 +11,7 @@ tags:
 
 Welcome to this site! I suppose you are looking for a proper "Hello World" for FPGAs, huh? Well OKAY, let me try:
 
-{% highlight systemverilog  %}
+```verilog
 module hello_world(
 	input clk,
 	input rstn,
@@ -31,6 +31,6 @@ always @(posedge clk or negedge rstn) begin
 end
 
 endmodule
-{% endhighlight %}
+```
 
 Yup that's right, a blinking LED. Anyway so this site will contain a collection of random postingx having to do with various projectx and research I'll be conducting. So while you are waiting for more content check out my [About Me](/about.html) area.
