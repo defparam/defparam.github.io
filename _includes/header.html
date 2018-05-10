@@ -43,10 +43,10 @@
 {% endif %}
 {% if page.summary_image %}
 <meta name="twitter:card"  content="summary_large_image">
-<meta name="twitter:image" content="{{ page.summary_image }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page.summary_image }}">
 {% else %}
 <meta name="twitter:card"  content="summary">
-<meta name="twitter:image" content="{{ site.summary_image }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.summary_image }}">
 {% endif %}
 <!-- end of Twitter cards -->
 
