@@ -7,8 +7,6 @@ tags:
  - FPGA
 ---
 
-# Hello World
-
 Welcome to this site! As you can imagine this post was mainly to test out my first blog posting on reconfig.io, but I suppose you are looking for a proper "Hello World" for FPGAs, huh? Well Okay, let me try:
 
 
