@@ -1,7 +1,9 @@
 # Jekyll configuration
 
 name: Reconfig.IO
+title: A Nifty Collection of Tales & PoC
 description: A Nifty Collection of Tales & PoC
+summary_image: /assets/images/default-card.png
 
 # Url is currently only used only for the RSS feed in feed.xml
 url: http://reconfig.io
