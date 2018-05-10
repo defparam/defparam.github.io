@@ -4,7 +4,6 @@ title: "Hello World"
 date: 2018-05-09
 description: My introduction to the world. Come check it out. 
 tags: 
- - First Post
  - FPGA
 ---
 
