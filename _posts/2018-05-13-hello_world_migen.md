@@ -4,7 +4,7 @@ title: "Hello World for FPGA (in Migen)"
 date: 2018-05-13
 description: Hello world! Here is an LED in migen. My first jump into Migen.
 github_comments_issueid: 2
-summary_image: /assets/images/migen.svg
+summary_image: /assets/images/migen.png
 tags: 
  - FPGA
  - migen
