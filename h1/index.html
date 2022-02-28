@@ -13,87 +13,35 @@
         <!-- insert the page content here -->
 		<span class="center"><img src="logo.png" alt="h1 stats" /></span>
 		<span class="titlecenter">Hackerone Stats</span>
+		<h1>Disclaimer</h1>
+		<p>This project is not affiliated with Hackerone. This is just a side project by the author and the data collected by this project was obtained by public sources and is not guaranteed to be accurate or reliable. The author is not liable for how this data is used. At any point Hackerone can decide to shut down or change their APIs at which point this project will likely not continue. This project and its author provides this service free of charge and collects no payments in any form.</p>
         <h1>What is this?</h1>
-        <p>Hackerone Stats is a bunch of automation and tooling built to keep track of data from all public bounty programs listed on Hackerone. Hackerone does a great job compiling metrics on hackers by utilizing reputation/impact scores and managing leaderboards. However, while comparing the performance of other hackers to yourself is important it does not give you the full picture on how the bounty programs themselves are doing. Hackerone Stats was created to provide data on these bounty platform to provide all hackers the important information on what targets to select next.</p>
+        <p>Hackerone Stats is a bunch of automation built to keep track of data from all public bounty programs listed on Hackerone. Hackerone does a great job compiling metrics on hackers by utilizing reputation/impact scores and managing leaderboards. However, while comparing the performance of other hackers to each other is important, it does not give you the full picture on how the bounty programs themselves are doing. Hackerone Stats was created to provide data on these bounty programs to provide all hackers the important day to day information of their performance.</p>
 		<h1>How?</h1>
 		<p>Everything on Hackerone Stats is fully automated for the most part. So far here is a list of things h1stats does:</p>
 		<ul>
           <li>We capture bounty program data every night at 11:30 PM Eastern</li>
 		  <li>We calculate payout changes for each program and post a top 10 image on twitter at midnight eastern time</li>
 		  <li>We calculate resolved report changes for each program and post a top 10 image on twitter at midnight eastern time</li>
-		  <li>We calculate weekly metrics and post summaries on twitter each Monday at midnight eastern time</li>
+		  <li>We calculate other high level stats and post them to twitter at midnight eastern time</li>
 		  <li>All captured bounty data is checked into github and published on this website</li>
+		  <li>The main tool that is used is: <a href="https://github.com/defparam/h1stats">https://github.com/defparam/h1stats</a></li>
         </ul>
-	</div>
+		<h1>Twitter Diagrams</h1>
+		<p>Each night our sleepless robot collects point-in-time data from Hackerone public sources and tweets out 3 images. The first image is the top 10 bounty payments made on that day. These payments are calculated by taking the total bounty payments of the program today and subtracting them from their total bounty payments from yesterday. The first column is the program name, the second column is the bounty payout for that day and the third column is delta of the previous day payout with an up/down indicator. The second image is the top 10 resolved reports made from all bounty and non-bounty programs on Hackerone that day. The first column is the program name, the second column is the total reports resolved for that day and the third column is delta of the previous day resolved reports with an up/down indicator. Lastly, the final image tweeted is the summed-up information for Hackerone on that day. The number of programs in total, the total bounty payments made by all programs and the total reports resolved by all programs.</p>
+		
+		<h1>Bounty Data (CSV Files)</h1>
+		<p>All data can be found at: <a href="https://github.com/defparam/h1data">https://github.com/defparam/h1data</a></p>
+		<table style="width:100%; border-spacing:0;">
+          <tr><th>Filename</th><th>Date of data captured</th></tr>
+          <tr><td><a href="">h1stats-1646022601.csv</a></td><td>Sun 02/27/22</td></tr>
+
+        </table>
+        <h2>Sun 02/27/22</h2>
+<img src="https://pbs.twimg.com/media/FMtCPXlXsAgjJzx.png" alt="" width="325" height="181">
+<img src="https://pbs.twimg.com/media/FMtCPzHXMAQ3jwT.png" alt="" width="325" height="181">
+<img src="https://pbs.twimg.com/media/FMtCQMmWUAMPvrR.png" alt="" width="325" height="181">
+
+		</div>
 </body>
 </html>
-
-
-<!--         <h2>Headings</h2>
-        <p>These are the different heading formats:</p>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <h2>Text</h2>
-        <p>The following examples show how the text (within '&lt;p&gt;&lt;/p&gt;' tags) will appear:</p>
-        <p><strong>This is an example of bold text</strong></p>
-        <p><i>This is an example of italic text</i></p>
-        <p><a href="#">This is a hyperlink</a></p>
-        <h2>Lists</h2>
-        <p>This is an unordered list:</p>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ul>
-        <p>This is an ordered list:</p>
-        <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-        </ol>
-        <h2>Images</h2>
-        <p>images can be placed on the left, in the center or on the right:</p>
-        <span class="left"><img src="style/graphic.png" alt="example graphic" /></span>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum.
-        </p>
-        <span class="center"><img src="style/graphic.png" alt="example graphic" /></span>
-        <span class="right"><img src="style/graphic.png" alt="example graphic" /></span>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-        <h2>Tables</h2>
-        <p>Tables should be used to display data and not used for laying out your website:</p>
-        <table style="width:100%; border-spacing:0;">
-          <tr><th>Item</th><th>Description</th></tr>
-          <tr><td>Item 1</td><td>Description of Item 1</td></tr>
-          <tr><td>Item 2</td><td>Description of Item 2</td></tr>
-          <tr><td>Item 3</td><td>Description of Item 3</td></tr>
-          <tr><td>Item 4</td><td>Description of Item 4</td></tr>
-        </table>
-        <h2>Form Elements</h2>
-        <form action="#" method="post">
-          <div class="form_settings">
-            <p><span>Form field example</span><input type="text" name="name" value="" /></p>
-            <p><span>Textarea example</span><textarea rows="8" cols="50" name="name"></textarea></p>
-            <p><span>Checkbox example</span><input class="checkbox" type="checkbox" name="name" value="" /></p>
-            <p><span>Dropdown list example</span><select id="id" name="name"><option value="1">Example 1</option><option value="2">Example 2</option></select></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="button" /></p>
-          </div>
-        </form>
-    </div>
-
- -->

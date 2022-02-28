@@ -297,6 +297,11 @@ table tr th, table tr td
   text-align: left;}
   
 table tr td
-{ background: #F0EFE2;
+{ background: #000
   color: #47433F;
   border-top: 1px solid #FFF;}
+  
+  table tr td a
+{ 
+  
+  color: #FFF;}
